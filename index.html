@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>My Wishlist App</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="head_bar">
+  <h1 class="head_bar__title">My Wishlist 🛍️</h1>
+</header>
+
+<main>
+
+  <section class="input_section">
+    <h2>Tambah Keinginan Baru</h2>
+
+    <form id="inputItem">
+
+      <div class="input">
+        <label for="inputItemName">Nama Barang</label>
+        <input id="inputItemName" type="text" placeholder="Misal: Sepatu Running" required>
+      </div>
+
+      <div class="input">
+        <label for="inputItemPrice">Estimasi Harga (Rp)</label>
+        <input id="inputItemPrice" type="number" placeholder="Contoh: 500000" required>
+      </div>
+
+      <div class="input">
+        <label for="inputItemNote">Keterangan / Toko</label>
+        <input id="inputItemNote" type="text" placeholder="Misal: Toko Oren / Diskon 12.12" required>
+      </div>
+
+      <div class="input_inline">
+        <label for="inputItemIsBought">Sudah Dibeli?</label>
+        <input id="inputItemIsBought" type="checkbox">
+      </div>
+
+      <button id="itemSubmit" type="submit">
+        Simpan ke Wishlist
+      </button>
+
+    </form>
+  </section>
+
+  <section class="search_section">
+    <h2>Cari Barang</h2>
+    <form id="searchItem">
+      <label for="searchItemName">Kata Kunci</label>
+      <input id="searchItemName" type="text" placeholder="Cari barang impian...">
+      <button id="searchSubmit" type="submit">Cari</button>
+    </form>
+  </section>
+
+  <section class="song_shelf">
+    <h2>📝 Daftar Keinginan</h2>
+
+    <div id="incompleteItemList" class="song_list">
+      </div>
+  </section>
+
+  <section class="song_shelf">
+    <h2>✅ Sudah Dibeli</h2>
+
+    <div id="completeItemList" class="song_list">
+      </div>
+  </section>
+
+</main>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
